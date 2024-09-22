@@ -7,6 +7,8 @@ const disBtn=document.getElementById('dis-btn')
 const totallAmount=document.getElementById('totall-amount')
 const grandTotall=document.getElementById('grand-totall')
 const newRow=document.getElementById('new-row')
+const inputPhone=document.getElementById('input-phone')
+const nextBtn=document.getElementById('next-btn')
 
 
 
@@ -22,6 +24,7 @@ function turnIntoValue(id){
     return value
     
 }
+
 
  let totall=0;
  let seatNumber=[]
@@ -64,8 +67,16 @@ function btnClicked(id){
            </div>
     `
 
+    if(seatNumber.length>=0){
+      inputPhone.removeAttribute("disabled")
+      // inputPhone.classList.add('hidden')
+   }  
 }
 
+if(grandTotall.innerText==='***'){
+   inputPhone.setAttribute("disabled",true)
+   // inputPhone.classList.add('hidden')
+}
 
 
 A1.addEventListener('click',function(){
@@ -103,4 +114,18 @@ disBtn.addEventListener('click',function(){
         <p class="font-medium">Discount</p>
         <p class="font-medium">BDT ${grandTotall.innerText}</p>
     `
+})
+// jgkl
+
+
+// nxt btn
+inputPhone.addEventListener('keyup',function(event){
+    let input =event.target.value
+    console.log(input)
+    if(input.length>=11){
+      nextBtn.removeAttribute("disabled")
+    }
+})
+document.getElementById('continue-btn').addEventListener('click',function(){
+   window.location.reload()
 })
