@@ -51,7 +51,7 @@
                        </div>
                     </div>
                     <div class="">
-                      <p class="bg-[#1DD10026] text-[#1DD100] p-2 rounded-xl "><i class="fa-solid fa-couch mr-2"></i><span>40</span> Seats left</p>
+                      <p class="bg-[#1DD10026] text-[#1DD100] p-2 rounded-xl "><i class="fa-solid fa-couch mr-2"></i><span id="decrease-number">40</span> Seats left</p>
                     </div>
                 </div>
                 <div class="bg-[#F7F8F8] px-5  rounded-2xl"> 
@@ -99,14 +99,14 @@
                   <div class="grid grid-cols-12 gap-6 py-6 ">
                     <!-- row1 -->
                     <p class="flex items-center ">A</p>
-                   <p class="col-span-2 "><button class="btn w-[100%] hover:bg-black hover:text-white">A1</button></p>
-                   <p class="col-span-2 "><button class="btn w-[100%] hover:bg-black hover:text-white">A2</button></p>
+                   <p class="col-span-2 "><button id="A1" class="btn w-[100%] hover:bg-black hover:text-white">A1</button></p>
+                   <p class="col-span-2 "><button id="A2" class="btn w-[100%] hover:bg-black hover:text-white">A2</button></p>
                    <p class="col-span-3"></p>
-                   <p class="col-span-2 "><button class="btn w-[100%] hover:bg-black hover:text-white">A3</button></p>
-                   <p class="col-span-2 "><button class="btn w-[100%] hover:bg-black hover:text-white">A4</button></p>
+                   <p class="col-span-2 "><button id="A3" class="btn w-[100%] hover:bg-black hover:text-white">A3</button></p>
+                   <p class="col-span-2 "><button id="A4" class="btn w-[100%] hover:bg-black hover:text-white">A4</button></p>
                     <!-- row2 -->
                     <p class="flex items-center ">B</p>
-                   <p class="col-span-2 "><button class="btn w-[100%] hover:bg-black hover:text-white">B1</button></p>
+                   <p class="col-span-2 "><button id="B1" class="btn w-[100%] hover:bg-black hover:text-white">B1</button></p>
                    <p class="col-span-2 "><button class="btn w-[100%] hover:bg-black hover:text-white">B2</button></p>
                    <p class="col-span-3"></p>
                    <p class="col-span-2 "><button class="btn w-[100%] hover:bg-black hover:text-white">B3</button></p>
@@ -175,24 +175,24 @@
                      
                      <div class="bg-[#F7F8F8] mt-4 rounded-xl">
                         <div class="flex justify-between border-b-2 border-dashed p-3">
-                           <p class="font-medium flex">Seat <span class="bg-[#1DD100] w-3.5 h-4 text-white flex justify-center items-center inter rounded-full text-sm">0</span></p>
+                           <p class="font-medium flex">Seat <span id="increase-number" class="bg-[#1DD100] w-3.5 h-4 text-white flex justify-center items-center inter rounded-full text-sm">0</span></p>
                            <p class="font-medium">Class</p>
                            <p class="font-medium">Price</p>
                         </div>
-                        <ul class="border-b-2 py-4">
-                           <h1 class="text-3xl text-red-500 text-center">No Seat Booked</h1>
+                        <ul id="add-li" class="border-b-2 py-4">
+                           <h1 id="no-seat" class="text-3xl text-red-500 text-center">No Seat Booked</h1>
                         </ul>
                         <div class="flex justify-between p-3">
                             <p class="font-medium">Total Price</p>
-                            <p class="font-medium">BDT <span>***</span></p>
+                            <p class="font-medium">BDT <span id="totall-amount">***</span></p>
                          </div>
-                        <div class="bg-white w-[94%] mx-auto rounded-xl flex justify-between p-2 ">
-                            <input class="bg-transparent" disabled type="text" placeholder="Have any coupon ?">
-                            <button class="btn  bg-[#1DD100]" disabled>Appy</button>
+                        <div id="new-row" class="bg-white w-[94%] mx-auto rounded-xl flex justify-between p-2 ">
+                            <input id="dis-input" class="bg-transparent" disabled type="text" placeholder="Have any coupon ?">
+                            <button id="dis-btn" class="btn  bg-[#1DD100]" disabled>Appy</button>
                         </div>
                         <div class="flex justify-between  p-3">
                             <p class="font-medium">Grand Total</p>
-                            <p class="font-medium">BDT <span>***</span></p>
+                            <p class="font-medium">BDT <span id="grand-totall">***</span></p>
                          </div>
                      </div>
                      <div class=" ">
@@ -258,5 +258,6 @@
     <footer>
         
     </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>
